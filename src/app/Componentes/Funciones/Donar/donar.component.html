@@ -59,7 +59,7 @@
             donaForm.get('idCategoria')?.hasError('required')
           "
         >
-          <p class="error">Categoria requerida</p>
+          <p class="error">*Categoria requerida</p>
         </div>
         <br />
         <label>
@@ -77,7 +77,7 @@
             required
           ></textarea>
           <div *ngIf="donaForm.get('descripcion_producto')?.hasError('minlength')">
-            <p class="error">La contraseña debe tener al menos 15 caracteres</p>
+            <p class="error">*La descripción debe tener al menos 15 caracteres</p>
           </div>
           <div
             *ngIf="
@@ -85,7 +85,7 @@
               donaForm.get('descripcion_producto')?.hasError('required')
             "
           >
-            <p class="error">Texto requerido requerido</p>
+            <p class="error">*Texto requerido requerido</p>
           </div>
         </label>
         <br />

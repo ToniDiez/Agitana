@@ -20,8 +20,9 @@
               touched.username &&
               loginForm.get('username')?.hasError('required')
             "
+            class="error"
           >
-            Nombre de usuario requerido
+            *Nombre de usuario requerido
           </p>
         </div>
         <div>
@@ -41,8 +42,9 @@
             touched.password &&
             loginForm.get('password')?.hasError('required')
           "
+          class="error"
         >
-          <p>Contraseña requerida</p>
+          <p>*Contraseña requerida</p>
         </div>
         </div>
         <input

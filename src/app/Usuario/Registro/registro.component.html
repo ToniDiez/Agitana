@@ -22,7 +22,7 @@
               loginForm.get('username')?.hasError('required')
             "
           >
-            <p>Nombre de usuario requerido</p>
+            <p>*Nombre de usuario requerido</p>
           </div>
         </div>
         <div class="divi">
@@ -39,7 +39,7 @@
             required
           />
           <div *ngIf="loginForm.get('password')?.hasError('minlength')">
-            <p>La contraseña debe tener al menos 5 caracteres</p>
+            <p>*La contraseña debe tener al menos 5 caracteres</p>
           </div>
           <div
             *ngIf="
@@ -47,7 +47,7 @@
               loginForm.get('password')?.hasError('required')
             "
           >
-            <p>Contraseña requerida</p>
+            <p>*Contraseña requerida</p>
           </div>
         </div>
         <div class="divi">
@@ -69,7 +69,7 @@
               touched.nombre && loginForm.get('nombre')?.hasError('required')
             "
           >
-            <p>Nombre requerido</p>
+            <p>*Nombre requerido</p>
           </div>
         </div>
         <div class="divi">
@@ -89,7 +89,7 @@
               loginForm.get('apellido1')?.hasError('required')
             "
           >
-            <p>Primer Apellido requerido</p>
+            <p>*Primer Apellido requerido</p>
           </div>
         </div>
         <div class="divi">
@@ -109,7 +109,7 @@
               loginForm.get('apellido2')?.hasError('required')
             "
           >
-            <p>Segundo Apellido requerido</p>
+            <p>*Segundo Apellido requerido</p>
           </div>
         </div>
         <div class="divi">
@@ -130,7 +130,7 @@
               loginForm.get('telefono')?.hasError('required')
             "
           >
-            <p>Telefono requerido</p>
+            <p>*Telefono requerido</p>
           </div>
         </div>
         <div class="divi">
@@ -148,7 +148,7 @@
           <div
             *ngIf="touched.dni && loginForm.get('dni')?.hasError('required')"
           >
-            <p>DNI requerido</p>
+            <p>*DNI requerido</p>
           </div>
         </div>
         <div class="divi">
@@ -167,7 +167,7 @@
           <div
             *ngIf="touched.tipo && loginForm.get('tipo')?.hasError('required')"
           >
-            <p>Tipo requerido</p>
+            <p>*Tipo requerido</p>
           </div>
         </div>
       </form>
