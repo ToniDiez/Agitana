@@ -75,6 +75,7 @@
             (blur)="touched.descripcion_producto = true"
             minlength="15"
             required
+            (input)="capitalizeFirstLetter()"
           ></textarea>
           <div *ngIf="donaForm.get('descripcion_producto')?.hasError('minlength')">
             <p class="error">La contraseña debe tener al menos 15 caracteres</p>

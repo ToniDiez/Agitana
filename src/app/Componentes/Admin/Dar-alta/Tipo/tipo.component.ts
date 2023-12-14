@@ -22,6 +22,10 @@ export class TipoComponent {
       ]),
     });
   }
+  
+  capitalizeFirstLetter() {
+    this.nombre = this.nombre.charAt(0).toUpperCase() + this.nombre.slice(1);
+  }
   ngOnInit(){
     this.tipoForm = this.fb.group({
       nombre: ['', Validators.required],

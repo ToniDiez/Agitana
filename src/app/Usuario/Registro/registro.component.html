@@ -60,10 +60,8 @@
             id="nombre"
             formControlName="nombre"
             (blur)="touched.nombre = true"
+            (input)="capitalizeFirstLetter()"
           />
-          <div *ngIf="loginForm.get('password')?.hasError('minLength')">
-            <p>La contraseña debe tener al menos 3 caracteres</p>
-          </div>
           <div
             *ngIf="
               touched.nombre && loginForm.get('nombre')?.hasError('required')
@@ -82,6 +80,7 @@
             id="apellido1"
             formControlName="apellido1"
             (blur)="touched.apellido1 = true"
+            (input)="capitalizeFirstLetter()"
           />
           <div
             *ngIf="
@@ -102,6 +101,7 @@
             id="apellido2"
             formControlName="apellido2"
             (blur)="touched.apellido2 = true"
+            (input)="capitalizeFirstLetter()"
           />
           <div
             *ngIf="
