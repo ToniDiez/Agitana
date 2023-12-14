@@ -101,3 +101,8 @@
   background-color: #009579;
   opacity: 50%;
 }
+.error{
+    color: red;
+    margin-bottom: 1em;
+    font-size: 15px;
+}

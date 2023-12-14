@@ -79,10 +79,10 @@ export class RegistroComponent {
             console.log('entro en null');
             window.alert(response.message);
           } else {
-            window.alert('Pruba a Iniciar sesión con las credenciales creadas');
+            window.alert('Se ha creado el usuario correctamente');
 
-            this.router.navigate(['../']).then(() => {
-              window.location.href = '../';
+            this.router.navigate(['../Login']).then(() => {
+              window.location.href = '../Login';
             });
           }
         },
