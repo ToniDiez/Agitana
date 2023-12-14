@@ -12,6 +12,7 @@
             id="nombre"
             formControlName="nombre"
             (blur)="touched.nombre = true"
+            (input)="capitalizeFirstLetter()"
           />
           <div
             *ngIf="
@@ -32,6 +33,7 @@
           id="idCategoria"
           formControlName="idCategoria"
           (blur)="touched.idCategoria = true"
+          
         >
           <option *ngFor="let item of categoria" [value]="item.id">
             {{ item.nombre }}

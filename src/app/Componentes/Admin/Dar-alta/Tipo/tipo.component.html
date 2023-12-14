@@ -13,6 +13,7 @@
             id="nombre"
             formControlName="nombre"
             (blur)="touched.nombre = true"
+            (input)="capitalizeFirstLetter()"
           />
           <div
             *ngIf="
