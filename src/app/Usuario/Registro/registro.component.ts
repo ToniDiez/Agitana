@@ -41,6 +41,11 @@ export class RegistroComponent {
       Validators.minLength(5),
     ]),
   });}
+  capitalizeFirstLetter() {
+    this.nombre = this.nombre.charAt(0).toUpperCase() + this.nombre.slice(1);
+    this.apellido1 = this.apellido1.charAt(0).toUpperCase() + this.apellido1.slice(1);
+    this.apellido2 = this.apellido2.charAt(0).toUpperCase() + this.apellido2.slice(1);
+  }
  
  
  

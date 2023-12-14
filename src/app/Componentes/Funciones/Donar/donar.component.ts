@@ -32,6 +32,9 @@ export class DonarComponent {
       Validators.minLength(15),
     ]),
   });}
+  capitalizeFirstLetter() {
+    this.descripcion_producto = this.descripcion_producto.charAt(0).toUpperCase() + this.descripcion_producto.slice(1);
+  }
  
 
   ngOnInit(): void {

@@ -25,6 +25,11 @@ export class CategoriaComponent {
     });
   }
 
+  capitalizeFirstLetter() {
+    this.nombre = this.nombre.charAt(0).toUpperCase() + this.nombre.slice(1);
+    this.descripcion = this.descripcion.charAt(0).toUpperCase() + this.descripcion.slice(1);
+  }
+
   ngOnInit(){
     this.cateForm = this.fb.group({
       nombre: ['', Validators.required],
