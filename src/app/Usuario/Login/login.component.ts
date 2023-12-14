@@ -64,7 +64,7 @@ export class LoginComponent {
           } else if (
             response.rol == 'USER') {
             this.authService.setAuthUserType(response.tipo);
-            if(response.rol=='RECIBIDOR'){
+            if(response.tipo=='RECIBIDOR'){
               console.log('Usuario User Recibidor');
               this.router.navigate(['/User/InicioRecibidor']).then(() => {
                 window.location.href = '/User/InicioRecibidor';

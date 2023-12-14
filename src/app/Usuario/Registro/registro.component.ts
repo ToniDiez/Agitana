@@ -86,8 +86,8 @@ export class RegistroComponent {
           } else {
             window.alert('Se ha creado el usuario correctamente');
 
-            this.router.navigate(['../Login']).then(() => {
-              window.location.href = '../Login';
+            this.router.navigate(['OngSafa/Login']).then(() => {
+              window.location.href = 'OngSafa/Login';
             });
           }
         },

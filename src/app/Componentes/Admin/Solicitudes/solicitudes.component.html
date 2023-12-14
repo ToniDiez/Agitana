@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="crear" *ngIf="this.Solicitudes.estado !== 'ACEPTADA'">
+      <div class="crear" *ngIf="this.Solicitudes.estado !== 'ACEPTADA' && this.Solicitudes.estado !== 'RECHAZADA'">
         <div class="div">
           <label>Categoria del producto</label>
           <select
@@ -79,7 +79,7 @@
       </div>
 
       <br />
-      <div class="union" *ngIf="this.Solicitudes.estado !== 'ACEPTADA'">
+      <div class="union" *ngIf="this.Solicitudes.estado !== 'ACEPTADA' && this.Solicitudes.estado !== 'RECHAZADA'">
         <div>
           <table class="Table">
             <thead>
@@ -144,16 +144,40 @@
       <div *ngIf="this.Solicitudes.estado == 'ACEPTADA'">
         <h1>Esta Solicitud fue Aceptada</h1>
       </div>
+      <div *ngIf="this.Solicitudes.estado == 'RECHAZADA'">
+        <h1>Esta Solicitud fue Rechazada</h1>
+      </div>
       <br />
       <br />
       <div class="buttons">
         <button class="btn btn-info" (click)="cerrar()">Volver</button>
-        <button class="btn btn-info" (click)="Rechazar()">Rechazar Solicitud</button>
-        <button class="btn btn-info" (click)="Pendiente()">Poner en Pendiente de Stock</button>
+        <button
+          class="btn btn-info"
+          *ngIf="
+            this.Solicitudes.estado !== 'ACEPTADA' &&
+            this.Solicitudes.estado !== 'RECHAZADA'
+          "
+          (click)="Rechazar()"
+        >
+          Rechazar Solicitud
+        </button>
+        <button
+          class="btn btn-info"
+          *ngIf="
+            this.Solicitudes.estado !== 'ACEPTADA' &&
+            this.Solicitudes.estado !== 'RECHAZADA'
+          "
+          (click)="Pendiente()"
+        >
+          Poner en Pendiente de Stock
+        </button>
         <button
           class="btn btn-info"
           (click)="modificar()"
-          *ngIf="this.Solicitudes.estado !== 'ACEPTADA'"
+          *ngIf="
+            this.Solicitudes.estado !== 'ACEPTADA' &&
+            this.Solicitudes.estado !== 'RECHAZADA'
+          "
         >
           Resolver
         </button>
